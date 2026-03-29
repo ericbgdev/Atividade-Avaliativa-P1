@@ -32,7 +32,8 @@ Data/Store: Camada que gerencia a persistência dos dados em memória durante a 
 .
 #### Estrutura de Pastas
 A organização segue o padrão sugerido para projetos profissionais
-:
+
+
 lib/
 ├── main.dart                # Ponto de entrada e configuração de rotas [19]
 └── app/
@@ -49,6 +50,8 @@ lib/
         ├── login_page.dart
         ├── signup_page.dart
         └── splash_page.dart
+
+
 #### Tecnologias e Requisitos Técnicos
 Navegação por Rotas: Implementada no MaterialApp para facilitar a transição entre telas
 .
