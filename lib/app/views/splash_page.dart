@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../viewmodels/splash_viewmodel.dart'; // Importe a ViewModel
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -8,27 +9,35 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  final _viewModel = SplashViewModel(); // Instância da ViewModel
+
   @override
   void initState() {
     super.initState();
-    // Timer de alguns segundos exigido [2]
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/login');
+    // A View pede para a ViewModel iniciar a lógica de espera
+    _viewModel.inicializar(() {
+      // Quando a lógica da ViewModel termina, a View executa a navegação
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, '/login');
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container( // Requisito: Widgets básicos [2]
+      body: Container(
         width: double.infinity,
         color: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Icon(Icons.school, size: 80, color: Colors.white),
+            Icon(Icons.rocket_launch, size: 100, color: Colors.white),
             SizedBox(height: 20),
-            Text("Projeto ADS", style: TextStyle(color: Colors.white, fontSize: 24)),
+            Text(
+              'Sistema ADS',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
           ],
         ),
       ),
