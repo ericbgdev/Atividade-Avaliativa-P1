@@ -30,28 +30,6 @@ View: Camada de interface que contém apenas os widgets e a lógica de validaç�
 .
 Data/Store: Camada que gerencia a persistência dos dados em memória durante a execução do app
 .
-#### Estrutura de Pastas
-A organização segue o padrão sugerido para projetos profissionais
-
-
-lib/
-├── main.dart                # Ponto de entrada e configuração de rotas [19]
-└── app/
-    ├── data/
-    │   └── usuario_mock_store.dart  # Repositório Singleton para dados mockados [18]
-    ├── models/
-    │   └── usuario_model.dart       # Modelo do usuário [15]
-    ├── viewmodels/                  # Lógica de negócio isolada [20]
-    │   ├── login_viewmodel.dart
-    │   ├── signup_viewmodel.dart
-    │   └── splash_viewmodel.dart
-    └── views/                       # Interface e Widgets [21]
-        ├── home_page.dart
-        ├── login_page.dart
-        ├── signup_page.dart
-        └── splash_page.dart
-
-
 #### Tecnologias e Requisitos Técnicos
 Navegação por Rotas: Implementada no MaterialApp para facilitar a transição entre telas
 .
