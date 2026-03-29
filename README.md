@@ -6,7 +6,8 @@
 
 
 👥 Integrantes
-NomeRAEric Butzloff Gudera25001129Ícaro Cauã Guminiak de Godoy25000026
+Eric Butzloff Gudera RA:25001129
+Ícaro Cauã Guminiak de Godoy RA:25000026
 
 📋 Sobre o Projeto
 Aplicativo Flutter desenvolvido como atividade avaliativa P1, implementando um fluxo completo de autenticação (login e cadastro) utilizando o padrão de arquitetura MVVM (Model-View-ViewModel) com gerenciamento de estado via ChangeNotifier.
