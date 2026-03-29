@@ -1,4 +1,4 @@
-### Atividade Avaliativa P1 - Projeto Flutter - Professor Marcelo Ciacco
+# Atividade Avaliativa P1 - Projeto Flutter - Professor Marcelo Ciacco
 
 👥 Integrantes do Grupo
 Eric Butzloff Gudera RA: 25001129
@@ -8,7 +8,7 @@ Eric Butzloff Gudera RA: 25001129
 Este projeto consiste no desenvolvimento de um aplicativo Flutter focado em navegação, formulários, validação e organização arquitetural
 . O objetivo é demonstrar o domínio de conceitos como separação de responsabilidades e manipulação de dados em memória
 .
-# Fluxo do Aplicativo
+#### Fluxo do Aplicativo
 O aplicativo segue rigorosamente o fluxo de navegação exigido
 :
 Splash Screen: Tela inicial com identidade visual e timer de 3 segundos
@@ -19,7 +19,7 @@ Cadastro: Tela para registro de novos usuários, armazenando-os em uma lista em 
 .
 Home: Tela de destino após login bem-sucedido, contendo ícone e texto centralizados
 .
-# Arquitetura Adotada
+#### Arquitetura Adotada
 O projeto utiliza a arquitetura MVVM (Model-View-ViewModel) para garantir a separação de responsabilidades
 :
 Model: Define a estrutura de dados do usuário (UsuarioModel)
@@ -30,7 +30,7 @@ View: Camada de interface que contém apenas os widgets e a lógica de validaç�
 .
 Data/Store: Camada que gerencia a persistência dos dados em memória durante a execução do app
 .
-# Estrutura de Pastas
+#### Estrutura de Pastas
 A organização segue o padrão sugerido para projetos profissionais
 :
 lib/
@@ -49,7 +49,7 @@ lib/
         ├── login_page.dart
         ├── signup_page.dart
         └── splash_page.dart
-# Tecnologias e Requisitos Técnicos
+#### Tecnologias e Requisitos Técnicos
 Navegação por Rotas: Implementada no MaterialApp para facilitar a transição entre telas
 .
 Dados Mockados: Uso de uma List<UsuarioModel> gerenciada pelo padrão Singleton, garantindo que os usuários cadastrados estejam acessíveis na tela de login
