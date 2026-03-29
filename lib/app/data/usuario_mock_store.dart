@@ -1,22 +1,21 @@
-import '../models/usuario_model.dart';
+import 'package:flutter_application_1/app/feature/auth/model/user_model.dart';
 
 class UsuarioMockStore {
-  // Lista em memória exigida [5, 7]
-  final List<UsuarioModel> _usuarios = [];
+  static final UsuarioMockStore instance = UsuarioMockStore._();
+  UsuarioMockStore._();
 
-  // Singleton: instância única para todo o app [6]
-  static final UsuarioMockStore _instance = UsuarioMockStore._internal();
-  factory UsuarioMockStore() => _instance;
-  UsuarioMockStore._internal();
+  final List<UserModel> usuarios = [];
 
-  void adicionar(UsuarioModel usuario) => _usuarios.add(usuario);
+  void adicionar(UserModel user) {
+    usuarios.add(user);
+  }
 
-  UsuarioModel? buscar(String login, String senha) {
+  UserModel? buscar(String email, String password) {
     try {
-      return _usuarios.firstWhere(
-        (u) => u.login == login && u.senha == senha
+      return usuarios.firstWhere(
+        (u) => u.email == email && u.password == password,
       );
-    } catch (e) {
+    } catch (_) {
       return null;
     }
   }
